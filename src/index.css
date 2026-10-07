@@ -1,0 +1,161 @@
+/* 全体の基本スタイル */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 15px;
+  background: #2563eb;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ログイン・会員登録画面 */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form h1 {
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.auth-form input {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+}
+
+.switch {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.message {
+  margin: 0;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.message.error {
+  background: #fdecec;
+  color: #b42318;
+}
+
+.message.info {
+  background: #e8f1fd;
+  color: #1d4ed8;
+}
+
+/* 物件一覧画面 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #52606d;
+}
+
+.logout {
+  background: #52606d;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.card .rent {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.card .area {
+  margin: 0;
+  font-size: 14px;
+  color: #52606d;
+}
