@@ -35,6 +35,11 @@
 - `.env` に `VITE_SUPABASE_URL` と `VITE_SUPABASE_PUBLISHABLE_KEY` を設定する（雛形は `.env.example`）
 - `.env` は `.gitignore` 済み。コミットしないこと
 
+## デプロイ情報
+
+- 本番URL：https://realestate-app-lac-five.vercel.app
+- Supabaseプロジェクト名：realestate-app
+
 ## コーディング規約
 
 - 既存コードのスタイル・命名・コメント量に合わせる
