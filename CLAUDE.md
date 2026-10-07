@@ -13,8 +13,16 @@
 - `src/lib/supabaseClient.js` — Supabase クライアント（`.env` の値を使用）
 - `src/contexts/AuthContext.jsx` — ログイン状態（セッション）を全体に提供
 - `src/components/ProtectedRoute.jsx` — 未ログイン時に `/login` へリダイレクト
+- `src/lib/propertiesApi.js` — 物件テーブルの CRUD（SELECT / INSERT / UPDATE / DELETE）
+- `src/components/PropertyForm.jsx` — 物件の登録・編集フォーム（共通）
 - `src/pages/` — 画面（`Login` / `Signup` / `Properties`）
-- `src/data/properties.js` — 物件一覧のダミーデータ
+- `supabase/schema.sql` — `properties` テーブルと RLS ポリシー。変更時は Supabase の SQL Editor で実行する
+
+## データベース
+
+- `properties` テーブル: `name`（物件名）/ `rent`（家賃・円）/ `area`（エリア名）/ `layout`（間取り）/ `user_id`（登録者）
+- RLS 有効。ログインユーザーは自分が登録した物件のみ表示・登録・編集・削除できる
+- `user_id` は既定値 `auth.uid()` で自動設定されるため、React 側からは送らない
 
 ## 開発コマンド
 
